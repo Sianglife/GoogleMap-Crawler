@@ -1,8 +1,11 @@
 import os
+import dotenv
 import json
 from loguru import logger
 from modules.db import set_db
 from crawler.search import map_keyword_search
+
+dotenv.load_dotenv()
 
 # Load keywords from JSON file
 with open("ref/keyword.json", "r", encoding="utf-8") as f:

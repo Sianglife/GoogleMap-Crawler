@@ -1,5 +1,8 @@
 # GoogleMap-Crawler
 
+Google Map Spot Crawler powered by Selenium and Google geocode API.
+Crawler works in 2025/08.
+
 ## Instructions
 ### Environment Variables
 Open `.env` file and set the following variables:
@@ -7,6 +10,7 @@ Open `.env` file and set the following variables:
 - `DB_NAME`: Database name
 - `COMMENT_LIMIT`: Maximum number of comments to scrape
 - `WAIT_TIMEOUT_DEFAULT`: Default wait timeout for Selenium
+- `GOOGLE_MAPS_API_KEY`: Google Maps API key
 There's also a sample `.env` file included in the repository for reference.
 
 ### Keyword
@@ -31,10 +35,7 @@ By default, the keywords are set to "旗津" with spots regarding religious plac
 
 ### Run
 Execute `main.py` to start crawling.
+Results will save to a MongoDB collection named by the area and keyword.
 ```bash
 python main.py
 ```
-
-## Database instructions
-Make sure to set up your MongoDB database before running the crawler. The crawler will use MongoDB to store the scraped data.
-

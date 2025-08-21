@@ -7,8 +7,8 @@ from crawler.search import map_keyword_search
 # Load keywords from JSON file
 with open("ref/keyword.json", "r", encoding="utf-8") as f:
     keywords = json.load(f)
-areas = keywords['區域']
-keywords = keywords['關鍵字']
+areas = keywords['area']
+keywords = keywords['keywords']
 
 if __name__ == "__main__":
     logger.add(

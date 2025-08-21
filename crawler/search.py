@@ -45,6 +45,8 @@ def map_keyword_search(keyword: str) -> None:
     while True:
         time.sleep(0.5)
         list_a = wait_elements(RESULT_ITEM_A)[counter:]
+        if len(list_a) < 1:
+            break
         a = list_a[0]
 
         # Update scroll position every 6 items

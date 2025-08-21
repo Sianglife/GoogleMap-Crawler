@@ -95,10 +95,9 @@ def map_keyword_search(keyword: str) -> None:
             **detail,
             'comments': comments,
             'geocode': geocode
-        }, 'crawler')
+        }, keyword)
 
         logger.info(
             f"Inserted search result: {detail['title']} into database.")
 
     return results
-
